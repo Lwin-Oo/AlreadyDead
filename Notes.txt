@@ -1,0 +1,71 @@
+Genre: E Com
+Usecases:
+1. Browse
+2. Click
+3. Save
+4. Order
+5. Pay
+
+Crucial: 
+Scalability
+Real-Time Updates
+Security rules
+
+How do we scale?
+Vertically
+
+DB -> NoSQL 
+Reason: Large Scale Data Handling, Unstructured/Semi Data, Need seamless real time updates
+        Security plays the most important role due to users' banking info -> Firestore
+Traits: Require ETL to feed data to NoSQL for CBS purposes
+
+
+CLient -> DNS
+|
+V
+Server -> DB
+
+Since we do not expect to hit 1M orders within 
+the first couple months.
+We will skip LB and HS for now;
+And NoSQLs are designed for VS
+
+We simply need two databases
+1. Store
+2. Inventory
+
+1. Store
+a. users
+b. orders
+
+users 
+{
+ userId:
+ name:
+ contactInfo:
+ location:
+ fashionProfile:
+}
+
+orders
+{
+ userId:
+ address:
+ cart:
+ status:
+}
+
+Inventory
+{
+ name:
+ SKU:
+ description:
+
+}
+
+
+
+
+
+
+

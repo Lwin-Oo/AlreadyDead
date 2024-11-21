@@ -1,0 +1,35 @@
+/* Product Card */
+.product-card {
+    background-color: #f9f9f9; /* Light gray background */
+    border: 1px solid #ddd; /* Light border */
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+    text-align: center;
+  }
+  
+  .product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  .product-image {
+    width: 100%;
+    height: auto;
+  }
+  
+  .product-details {
+    padding: 15px;
+  }
+  
+  .product-details h3 {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin: 10px 0 5px;
+  }
+  
+  .product-details p {
+    font-size: 1rem;
+    color: #000;
+  }
+  
